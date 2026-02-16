@@ -1,0 +1,27 @@
+flowchart TD
+  subgraph Dataset_Preparation
+    Y["YOLO dataset"] --> C1["YOLO to COCO JSON"]
+    C1 --> C2["COCO to OpenVocab JSON prompts"]
+    C2 --> C3["Clean COCO clip dup size"]
+  end
+
+  C3 --> DCFG["ships_open_vocab.yml"]
+  DCFG --> DLOAD["OpenVocabCocoDetection + transforms"]
+
+  CFG["rtv4_hgnetv2_m_ships_open_vocab.yml"] --> TRAIN
+  DLOAD --> TRAIN["Train loop torchrun 2 GPUs"]
+
+  subgraph Training_Loop
+    TRAIN --> FWD["Forward + teacher"]
+    FWD --> LOSS["Compute losses"]
+    LOSS --> OPT["Lion + AMP + EMA"]
+    OPT --> CKPT["Checkpoint every 10 epochs"]
+    OPT --> CSV["metrics.csv every 5 epochs"]
+    OPT --> PLOT["Plots every 50 epochs"]
+  end
+
+  TRAIN --> EVAL["COCO eval"]
+  EVAL --> BEST["best_stg1 / best_stg2"]
+  BEST --> OUTDIR["Outputs date based dir"]
+  OUTDIR --> LOGS["log.txt + summary events"]
+

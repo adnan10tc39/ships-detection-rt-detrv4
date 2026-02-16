@@ -1,0 +1,202 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+ships_env/
+.venv
+conda_env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyTorch - Model Checkpoints (ALL)
+*.pth
+*.pt
+*.pth.tar
+*.ckpt
+*.safetensors
+
+# Training outputs and logs
+outputs/
+logs/
+*.log
+*.0
+*.1
+
+# Generated data files
+*.csv
+training_hyperparams.csv
+training_hyperparams.json
+
+# Images - EXCLUDE ALL
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+
+# Videos
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+
+# Dataset (large files - ALL)
+dataset/
+augmentated_dataset/
+coco_format/
+open_vocab_dataset/
+
+# Model checkpoints and pretrained weights
+pretrain/
+checkpoints/
+weights/
+RT-DETRv4/pretrain/
+RT-DETRv4/outputs/
+RT-DETRv4/logs/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Documents (large) - EXCLUDE ALL
+*.docx
+*.doc
+*.pdf
+*.pptx
+*.xlsx
+docx_extracted/
+
+# Temporary files
+*.tmp
+*.temp
+temp_*
+*.bak
+*.swp
+torch_results.*
+onnx_result.*
+trt_result.*
+result.*
+temp_frame_*
+.~lock.*
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Documentation builds
+docs/_build/
+site/
+
+# Profiling
+*.prof
+*.pstats
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Text files - EXCLUDE ALL except specific ones
+*.txt
+!README.md
+!LICENSE
+!RT-DETRv4/tools/inference/README.md
+
+# Markdown files - EXCLUDE ALL except main README
+*.md
+!README.md
+!RT-DETRv4/tools/inference/README.md
+
+# Python and Shell scripts - keep only in RT-DETRv4
+*.py
+*.sh
+!RT-DETRv4/**/*.py
+!RT-DETRv4/**/*.sh
+!setup.sh
+
+# Config files - keep only in RT-DETRv4
+dataset.yaml
+!RT-DETRv4/configs/**/*.yml
+!RT-DETRv4/configs/**/*.yaml
+
+# Examples - exclude all
+examples/
+
+# DINOv3 - keep code, ignore cache and docs
+RT-DETRv4/dinov3/.git/
+RT-DETRv4/dinov3/__pycache__/
+RT-DETRv4/dinov3/**/__pycache__/
+RT-DETRv4/dinov3/**/*.pyc
+RT-DETRv4/dinov3/README.md
+RT-DETRv4/dinov3/LICENSE.md
+RT-DETRv4/dinov3/CONTRIBUTING.md
+RT-DETRv4/dinov3/CODE_OF_CONDUCT.md
+RT-DETRv4/dinov3/DATASETS.md
+RT-DETRv4/dinov3/MODEL_CARD.md
+RT-DETRv4/dinov3/notebooks/
+
+# RT-DETRv4 - exclude duplicate README and embedded git
+RT-DETRv4/README.md
+RT-DETRv4/dinov3/.git/
+
+# Push scripts - not needed in repo
+PUSH_COMMANDS.sh
+push_to_github.sh
+GITHUB_PUSH.md
+FINAL_PUSH.md
+QUICKSTART.md
+CONTRIBUTING.md
+PROJECT_STRUCTURE.md
