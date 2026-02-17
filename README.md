@@ -23,7 +23,6 @@
 - [Project Structure](#project-structure)
 - [Dataset Preparation](#dataset-preparation)
 - [Configuration](#configuration)
-- [Results](#results)
 - [Citation](#citation)
 - [License](#license)
 
@@ -59,7 +58,7 @@ The model leverages:
 ## ✨ Features
 
 - 🚀 **Real-time inference** with optimized performance
-- 🎯 **High accuracy** (87%+ AP on validation set)
+- 🎯 **High accuracy** (90%+ AP on validation set)
 - 🔄 **Open-vocabulary** detection with text prompts
 - 📊 **Multi-object support** within same class
 - 🎨 **Enhanced visualization** with class-specific colors
@@ -461,14 +460,6 @@ train_dataloader:
 ```
 
 ---
-
-## 📈 Results
-
-### Performance Metrics
-
-| Model | AP | AP50 | AP75 | FPS (T4) |
-|-------|----|----|----|----------|
-| RT-DETRv4-M | 87.2% | 92.5% | 94.1% | 169 |
 
 ### Training Curves
 
